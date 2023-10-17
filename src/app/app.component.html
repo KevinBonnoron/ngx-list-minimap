@@ -1,0 +1,5 @@
+<ngx-list-minimap [elements]="products" [groupBy]="groupByFirstLetterOfName">
+  <ng-template #componentTemplate let-product="element" let-group="group">
+    <div style="text-align: center; border: 1px solid black" [ngStyle]="{ color: group > 'J' ? 'red' : 'green' }">{{ product.name }}</div>
+  </ng-template>
+</ngx-list-minimap>
